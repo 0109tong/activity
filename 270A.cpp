@@ -4,15 +4,15 @@ using namespace std;
 int main (){
     int test;
     cin>>test;
-    float test_value[test];
-    float temp;
+    int test_value[test];
+    int temp;
     for (int i = 0;i<test;i++){
         cin>>test_value[i];
     }
     for (int i = 0;i<test;i++) {
         temp = test_value[i];
-        temp = 2.0/(1-(temp/180));
-        if (temp - (int)temp == 0){
+
+        if (360%(180-temp) == 0){
             cout<<"YES"<<endl;
         }
         else{
@@ -20,3 +20,6 @@ int main (){
         }
     }
 }
+
+
+
